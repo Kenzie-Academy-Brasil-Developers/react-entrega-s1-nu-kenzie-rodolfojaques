@@ -3,8 +3,17 @@ import imgK from "../../assets/NuKenzie.png"
 import img1 from "../../assets/Ellipse4.png"
 import img2 from "../../assets/Ellipse5.png"
 import img3 from "../../assets/Ellipse6.png"
+import cardImg from "../../assets/credit-card.png"
 
-function Inicio(){
+function Inicio({setPage}){
+
+    const pageIn = (e) => {
+
+        e.preventDefault()
+
+        setPage(true)
+    }
+    
 
     return (
         <main>
@@ -13,7 +22,7 @@ function Inicio(){
                     <img src={imgK} alt="Logo Nu Kenzie" />
                     <h1>Centralize o controle das suas finanças</h1>
                     <h5>de forma rapida e segura</h5>
-                    <button>Iniciar</button>
+                    <button onClick={pageIn}>Iniciar</button>
                 </div>
                 <div className="main__simbol">
                     <div className="main__simbol--cont1">
@@ -33,23 +42,23 @@ function Inicio(){
                     <div className="faixa__grey"></div>
                     <div className="faixa__grey"></div>
                     <div className="faixa__grey"></div>
-                    <div className="faixa__grey"></div>
-                    <div className="modal modal__pink">
-                        <div>
-                            <img src="../assets/.png" />
-                        </div>
-                        <div>
-                            <div className="faixa1"></div>
-                            <div className="faixa2"></div></div>                                    
-                    </div>
+                    <div className="faixa__grey"></div>                    
                     <div className="modal modal__green">
-                        <div>
-                            <img src="../assets/.png" />
+                        <div className='divImg--green'>
+                            <img className='imgPink' src={cardImg}/>
                         </div>
                         <div>
                             <div className="faixa1"></div>
                             <div className="faixa2"></div>
                         </div>
+                    <div className="modal modal__pink">
+                        <div className='divImg--pink'>
+                            <img className='imgGreen' src={cardImg}/>
+                        </div>
+                        <div>
+                            <div className="faixa1"></div>
+                            <div className="faixa2"></div></div>                                    
+                    </div>
                     </div>
                 </div>
             </div>

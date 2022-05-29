@@ -17,7 +17,6 @@ body{
     align-items: center;
     background-color: #000000;
     height: 100vh;
-    border: solid white;
     width: 80vw;
     height: 80vh;
     
@@ -40,6 +39,7 @@ body{
     font-weight: 800;
     font-size: 38px;
     line-height: 48px;
+    max-width: 320px;
 }
 
 .main__msg h5{
@@ -72,7 +72,7 @@ body{
     align-items: center;
 
     background-color: #E064CC;
-    opacity: 0.05;
+    opacity: 0.075;
     box-shadow: 1px 1px 25px 25px rgba(231, 180, 236, 0.634);
 }
 
@@ -126,8 +126,9 @@ body{
 
 .faixa__grey{
     background-color: #F3F3F3;
-    width: 10vw;
+    width: 17.4vh;
     height: 3vh;
+
     margin-bottom: 1vh;
     margin-right: 0.87vw;
 }
@@ -136,14 +137,34 @@ body{
 .modal__pink{
 
     position: absolute;
-    right: 3vw;
-    top: 12vh;
+    right: 6vw;
+    top: -6vh;
     background-color: #FFFFFF;
 
     height: 8vh;
     width: 23vh;
-    border: solid red;
+    border: solid #F3F3F3;
     border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.divImg--pink{
+    background-color: #FD377E;
+    max-width: 45px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__pink div img{
+
+    max-width: 5vh;
+    
 }
 
 .modal__green{
@@ -153,8 +174,42 @@ body{
     top: 18vh;
     background-color: #FFFFFF;
 
-    height: 8vh;
-    width: 23vh;
-    border: solid red;
+    height: 6vh;
+    width: 21vh;
+    border: solid #F3F3F3;
     border-radius: 6px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5px 8px;
+}
+
+.divImg--green{
+    background-color: #66C085;
+    max-width: 40px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__green div img{
+
+    max-width: 4.4vh;
+    
+}
+
+.faixa1{
+    background-color: #F3F3F3;
+    width: 13vh;
+    height: 1.75vh;
+    margin-bottom: 1vh;
+}
+
+.faixa2{
+    background-color: #F3F3F3;
+    width: 8vh;
+    height: 1.75vh;
 }
