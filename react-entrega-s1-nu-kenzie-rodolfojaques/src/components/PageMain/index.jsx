@@ -2,7 +2,7 @@ import Header from "./Header"
 import './style.css'
 import SectionMain from "./SectionMain"
 
-function PageMain({setPage}){
+function PageMain({setPage,listTransactions,setListTransactions}){
 
     const pageOut = (e) => {
 
@@ -13,7 +13,10 @@ function PageMain({setPage}){
     return (
         <main className="main2">
             <Header pageOut={pageOut}/>
-            <SectionMain/>
+            <SectionMain
+            listTransactions={listTransactions}
+            setListTransactions={setListTransactions}
+            />
         </main>
     )
 }

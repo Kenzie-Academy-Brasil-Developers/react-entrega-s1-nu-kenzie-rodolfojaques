@@ -1,6 +1,7 @@
 import './style.css'
+import Card from './Card'
 
-function Lista(){
+function Lista({listTransactions,setListTransactions}){
 
     return (
         <section className="container__lista">
@@ -13,7 +14,13 @@ function Lista(){
                 </nav>
             </div>
             <ul>
-
+                {
+                listTransactions.map((transaction, i) => <Card 
+                listTransactions={listTransactions}
+                setListTransactions={setListTransactions}
+                transaction={transaction} 
+                key={i} id={i} />)
+                }                 
             </ul>
         </section>
     )

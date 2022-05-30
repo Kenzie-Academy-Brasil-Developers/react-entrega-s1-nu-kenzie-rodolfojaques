@@ -6,10 +6,18 @@ import PageMain from './components/PageMain';
 function App() {
 
   const [page,setPage] = useState(false)
+  const [listTransactions,setListTransactions] = useState([])
+  console.log(listTransactions);
 
   return (
     <div className="App">
-      {page ? <PageMain setPage={setPage}/>:<Inicio setPage={setPage}/>}      
+      {page ? <PageMain 
+      setPage={setPage}
+      listTransactions={listTransactions}
+      setListTransactions={setListTransactions}
+      />:<Inicio 
+      setPage={setPage}
+      />}      
     </div>
   );
 }

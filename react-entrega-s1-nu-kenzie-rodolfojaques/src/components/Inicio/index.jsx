@@ -5,7 +5,7 @@ import img2 from "../../assets/Ellipse5.png"
 import img3 from "../../assets/Ellipse6.png"
 import cardImg from "../../assets/credit-card.png"
 
-function Inicio({setPage}){
+function Inicio({setPage,valueTotal}){
 
     const pageIn = (e) => {
 
