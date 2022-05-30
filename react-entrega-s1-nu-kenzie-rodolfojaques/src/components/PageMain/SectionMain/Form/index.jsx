@@ -1,21 +1,20 @@
 import { useState } from 'react'
 import './style.css'
-let identifica = 0
+
 function Form({listTransactions,setListTransactions}){
 
     const [descricao,setDescricao] = useState('')
     const [valor,setValor] = useState(0)
     const [type,setType] = useState('')
-    
 
     const getInfos = (e) => {
 
         e.preventDefault()
 
         type === 'saída' ? 
-        setListTransactions([...listTransactions,{description: descricao, type: type, value: Number(`-${valor}`), ident: identifica}])
+        setListTransactions([...listTransactions,{description: descricao, type: type, value: Number(`-${valor}`)}])
         :
-        setListTransactions([...listTransactions,{description: descricao, type: type, value: valor, ident: identifica}]);
+        setListTransactions([...listTransactions,{description: descricao, type: type, value: valor}]);
     }
 
     return (
@@ -34,6 +33,7 @@ function Form({listTransactions,setListTransactions}){
                     <div className='inputs__valor inputs__valor--select'>
                         <label htmlFor="entrada">Tipo de valor</label>
                         <select onChange={(e) => setType(e.target.value)} name="entrada">
+                            <option value="opções">Opções</option>
                             <option value="entrada">Entrada</option>
                             <option value="saída">Saída</option>
                         </select>

@@ -14,12 +14,8 @@ function Lista({listTransactions,setListTransactions}){
                 </nav>
             </div>
             <ul>
-                {
-                listTransactions.map((transaction, i) => <Card 
-                listTransactions={listTransactions}
-                setListTransactions={setListTransactions}
-                transaction={transaction} 
-                key={i} id={i} />)
+                {                
+                listTransactions.map((transaction, i) => <Card transaction={transaction} key={i} id={i} />)
                 }                 
             </ul>
         </section>

@@ -1,18 +1,9 @@
 import trash from "../../../../../assets/trash.png"
 import './style.css'
 
-function Card({transaction,id,listTransactions,setListTransactions},{key}){
+function Card({transaction,id},{key}){
 
     const {description, type, value} = transaction
-console.log(type);
-    const deleteItem = (e) => {
-
-        e.preventDefault()
-        console.log(e.target.parentNode.parentNode.parentNode.id);
-
-        const newList = listTransactions.filter(item => item.ident !== Number(e.target.parentNode.parentNode.parentNode.id))
-        setListTransactions(newList)
-    }
 
     return (
 
@@ -33,7 +24,7 @@ console.log(type);
             </div>
             <div className="action__card">
                 <p>R$ {value}</p>
-                <div onClick={deleteItem} className="base__img">
+                <div className="base__img">
                     <img src={trash}/>
                 </div>
             </div>

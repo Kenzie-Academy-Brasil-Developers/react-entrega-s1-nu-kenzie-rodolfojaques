@@ -7,7 +7,6 @@ function App() {
 
   const [page,setPage] = useState(false)
   const [listTransactions,setListTransactions] = useState([])
-  console.log(listTransactions);
 
   return (
     <div className="App">
