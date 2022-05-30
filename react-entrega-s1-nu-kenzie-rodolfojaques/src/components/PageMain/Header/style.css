@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 88px;
+    background-color: #F8F9FA;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10.5vw;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+header button{
+
+    width: 64px;
+    height: 40px;
+    border: 1.4px solid #E9ECEF;
+    border-radius: 8px;
+    border-style: none;
+}
