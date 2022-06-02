@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './style.css'
+import TotalMoney from './TotalMoney'
 
 function Form({listTransactions,setListTransactions}){
 
     const [descricao,setDescricao] = useState('')
     const [valor,setValor] = useState(0)
-    const [type,setType] = useState('')
+    const [type,setType] = useState('entrada')
 
     const getInfos = (e) => {
 
@@ -33,7 +34,6 @@ function Form({listTransactions,setListTransactions}){
                     <div className='inputs__valor inputs__valor--select'>
                         <label htmlFor="entrada">Tipo de valor</label>
                         <select onChange={(e) => setType(e.target.value)} name="entrada">
-                            <option value="opções">Opções</option>
                             <option value="entrada">Entrada</option>
                             <option value="saída">Saída</option>
                         </select>
@@ -42,13 +42,7 @@ function Form({listTransactions,setListTransactions}){
                 </div>
                 <button onClick={getInfos}>Inserir Valor</button>
             </form>
-            <section className='valorEmConta'>
-                <div className='valorEmConta--header'>
-                    <h3>Valor total:</h3>
-                    <span className='valorRend'>$ <span>{listTransactions.reduce((a,b) => a + b.value,0)}</span></span>
-                </div>
-                <p>O valor se refere ao saldo</p>
-            </section>
+            <TotalMoney listTransactions={listTransactions}/>
         </section>
 
     )

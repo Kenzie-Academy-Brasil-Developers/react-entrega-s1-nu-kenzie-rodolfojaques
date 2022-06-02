@@ -1,13 +1,13 @@
 
 .sec1{
-    height: 65vh;
+    height: inherit;
 }
 
 form{
     border: 1px solid #E9ECEF;
     border-radius: 4px;
-    width: 25vw;
-    height: 25vw;
+    width:inherit;
+    height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,7 +27,7 @@ form{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: .8rem;
     line-height: 22px;
     margin-bottom: 1vh;
 }
@@ -35,7 +35,7 @@ form{
 .descricao input{
 
     background-color: #F8F9FA;
-    width: 38vh;
+    width: 100%;
     height: 6vh;
     border: 2px solid #F8F9FA;
     border-radius: 5px;
@@ -48,7 +48,7 @@ form{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: .9rem;
     line-height: 26px;
 }
 
@@ -56,7 +56,7 @@ form{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: .8rem;
     line-height: 20px;
 
     color: #868E96;
@@ -78,7 +78,7 @@ form{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: .8rem;
     line-height: 22px;
 
     color: #212529;
@@ -86,7 +86,7 @@ form{
 }
 
 .inputs__valor input{
-    width: 15vh;
+    width: 95%;
     height: 6vh;
     border-radius: 5px;
     padding: 0px, 16px, 0px, 16px;
@@ -96,13 +96,13 @@ form{
 }
 
 .inputs__valor--number{
-    margin-right: 3vw;
+    margin-right: 1vw;
 
 }
 
 .inputs__valor select{
 
-    width: 15vh;
+    width: 24vh;
     height: 6vh;
     border-radius: 5px;
     padding: 0px, 16px, 0px, 16px;
@@ -119,7 +119,7 @@ form button{
     color: #FFFFFF;
     border-radius: 5px;
 
-    width: 38vh;
+    width: 100%;
     height: 6vh;
 }
 
@@ -128,8 +128,8 @@ form button{
 .valorEmConta{
     border: 1px solid #E9ECEF;
     border-radius: 4px;
-    width: 25vw;
-    height: 9vw;
+    width: inherit;
+    height: 17%;
     display: flex;
     flex-direction: column;
 
@@ -146,8 +146,8 @@ form button{
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 1rem;
+    line-height: 1rem;
     color: #212529;
 }
 
@@ -155,19 +155,197 @@ form button{
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 1rem;
+    line-height: 1rem;
     color: #FD377E;
 }
 
 .valorEmConta p{
 
-    margin-top: 2vh;
+    margin-top: .5rem;
     color: #5B6166;
 
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 22px;
+    font-size: .8rem;
+    line-height: 1.4rem;
+
+}
+
+@media(min-width: 768px){
+
+    .sec1{
+        height: 65vh;
+    }
+    
+    form{
+        border: 1px solid #E9ECEF;
+        border-radius: 4px;
+        width: 100%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.7vw;
+        margin-bottom: 4vh;
+    }
+    
+    .descricao{
+    
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .descricao label{
+    
+        color: #212529;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .9rem;
+        line-height: 22px;
+        margin-bottom: 1vh;
+    }
+    
+    .descricao input{
+    
+        background-color: #F8F9FA;
+        width: 100%;
+        height: 6vh;
+        border: 2px solid #F8F9FA;
+        border-radius: 5px;
+        padding-left: 1vh;
+        margin-bottom: 1vh;
+    }
+    
+    .descricao input::placeholder{
+    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    .descricao span{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .8rem;
+        line-height: 20px;
+    
+        color: #868E96;
+    }
+    
+    .valor-e-tipo{
+    
+        display: flex;
+        width: 100%;
+    }
+    
+    .inputs__valor{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1vh;
+    }
+    
+    .inputs__valor label{
+    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .8rem;
+        line-height: 22px;
+    
+        color: #212529;
+        margin-bottom: 1vh;
+    }
+    
+    .inputs__valor input{
+        width: 80%;
+        height: 6vh;
+        border-radius: 5px;
+        padding: 0px, 16px, 0px, 16px;
+    
+        border: 2px solid #F8F9FA;
+        background-color: #F8F9FA;
+    }
+    
+    .inputs__valor--number{
+        margin-right: 0vw;
+    
+    }
+    
+    .inputs__valor select{
+    
+        width: 100%;
+        height: 6vh;
+        border-radius: 5px;
+        padding: 0px, 16px, 0px, 16px;
+    
+        border: 2px solid #F8F9FA;
+        background-color: #F8F9FA;
+        color: #868E96;
+    }
+    
+    form button{
+    
+        background-color: #FD377E;
+        border: 2px solid #FD377E;
+        color: #FFFFFF;
+        border-radius: 5px;
+    
+        width: 100%;
+        height: 18%;
+    }
+    
+    /*__________________________________*/
+    
+    .valorEmConta{
+        border: 1px solid #E9ECEF;
+        border-radius: 4px;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+    
+        padding: 7%;
+    }
+    
+    .valorEmConta--header{
+    
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .valorEmConta--header h3{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 30px;
+        color: #212529;
+    }
+    
+    .valorRend {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 30px;
+        color: #FD377E;
+    }
+    
+    .valorEmConta p{
+    
+        margin-top: 2vh;
+        color: #5B6166;
+    
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .8rem;
+        line-height: 22px;
+    }
 }

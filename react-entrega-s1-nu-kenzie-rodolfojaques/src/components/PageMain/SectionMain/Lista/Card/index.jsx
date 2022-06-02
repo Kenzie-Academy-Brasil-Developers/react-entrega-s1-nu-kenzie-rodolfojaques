@@ -9,7 +9,7 @@ function Card({transaction,id},{key}){
 
         <li key={id} id={id} className="card__item">            
             <div className="description__card">
-                {type === "entrada" ? 
+                {type === "entrada" && typeof type !== "String"? 
                 <><div style={{background:"#03B898"}} 
                 className="faixa__status"></div></> 
                 : 
