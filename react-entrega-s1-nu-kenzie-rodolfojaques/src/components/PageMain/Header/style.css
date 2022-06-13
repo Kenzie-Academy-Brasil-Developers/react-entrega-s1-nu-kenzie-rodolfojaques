@@ -21,4 +21,6 @@ header button{
     border: 1.4px solid #E9ECEF;
     border-radius: 8px;
     border-style: none;
+
+    cursor: pointer;
 }

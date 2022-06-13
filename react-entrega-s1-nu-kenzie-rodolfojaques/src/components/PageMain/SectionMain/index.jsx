@@ -18,4 +18,4 @@ function SectionMain({listTransactions,setListTransactions}){
     )
 }
 
-export default SectionMain
+export default SectionMain 

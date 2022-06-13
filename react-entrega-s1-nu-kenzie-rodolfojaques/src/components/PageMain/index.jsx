@@ -21,4 +21,4 @@ function PageMain({setPage,listTransactions,setListTransactions}){
     )
 }
 
-export default PageMain
+export default PageMain 

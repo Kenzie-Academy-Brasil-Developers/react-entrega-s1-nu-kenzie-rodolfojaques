@@ -1,7 +1,7 @@
 import trash from "../../../../../assets/trash.png"
 import './style.css'
 
-function Card({transaction,id},{key}){
+function Card({transaction,id,deleteItem},{key}){
 
     const {description, type, value} = transaction
 
@@ -23,9 +23,9 @@ function Card({transaction,id},{key}){
 
             </div>
             <div className="action__card">
-                <p>R$ {value}</p>
+                <p>R$ {value.toFixed(2)}</p>
                 <div className="base__img">
-                    <img src={trash}/>
+                    <img onClick={deleteItem} src={trash}/>
                 </div>
             </div>
         </li>

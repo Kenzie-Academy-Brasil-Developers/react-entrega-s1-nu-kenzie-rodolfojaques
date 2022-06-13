@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import './style.css'
 import TotalMoney from './TotalMoney'
 
@@ -7,15 +7,20 @@ function Form({listTransactions,setListTransactions}){
     const [descricao,setDescricao] = useState('')
     const [valor,setValor] = useState(0)
     const [type,setType] = useState('entrada')
+    const [xId,setXId] = useState(-1)
 
+    useEffect(()=>{
+        setXId(xId + 1)
+    },[listTransactions])
+    
     const getInfos = (e) => {
 
         e.preventDefault()
 
         type === 'saída' ? 
-        setListTransactions([...listTransactions,{description: descricao, type: type, value: Number(`-${valor}`)}])
+        setListTransactions([...listTransactions,{id: xId, description: descricao, type: type, value: Number(`-${valor}`)}])
         :
-        setListTransactions([...listTransactions,{description: descricao, type: type, value: valor}]);
+        setListTransactions([...listTransactions,{id: xId, description: descricao, type: type, value: valor}]);
     }
 
     return (
